@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,16 @@
   <header class="sticky top-0 bg-white dark:bg-gray-900 z-50 shadow p-4 flex justify-between items-center">
     <h1 class="text-xl font-bold">Jorge Daniel Gonzalez</h1>
     <div class="flex gap-4 items-center">
-      <nav class="hidden sm:flex gap-4">
-        <a href="#resumen" class="hover:underline">Resumen</a>
-        <a href="#experiencia" class="hover:underline">Experiencia</a>
-        <a href="#educacion" class="hover:underline">Educación</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="docs/curriculum-vitae.pdf" download class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded hover:bg-blue-700 transition">Descargar PDF</a>
+      <nav class="hidden sm:flex gap-4 items-center">
+        <a href="#resumen" class="hover:underline" data-key="nav_summary">Summary</a>
+        <a href="#experiencia" class="hover:underline" data-key="nav_experience">Experience</a>
+        <a href="#educacion" class="hover:underline" data-key="nav_education">Education</a>
+        <a href="#skills" class="hover:underline" data-key="nav_skills">Skills</a>
+        <a href="docs/curriculum-vitae.pdf" download class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded hover:bg-blue-700 transition" data-key="nav_download_pdf">Download PDF</a>
       </nav>
+      <button id="lang-switcher" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm font-semibold rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+        ES
+      </button>
     </div>
   </header>
 
@@ -26,9 +29,9 @@
       <div>
         <h2 class="text-4xl font-bold mb-2">Software Developer</h2>
         <ul class="text-sm space-y-1">
-          <li><strong>Email:</strong> <a href="mailto:jorgedaniel29.jg@gmail.com" class="underline">jorgedaniel29.jg@gmail.com</a></li>
-          <li><strong>Teléfono:</strong> +54 9 11 3020 8941</li>
-          <li><strong>Dirección:</strong> Dr. Gabriel Ardoino 490, Ramos Mejía, Buenos Aires</li>
+          <li><strong data-key="profile_email">Email:</strong> <a href="mailto:jorgedaniel29.jg@gmail.com" class="underline">jorgedaniel29.jg@gmail.com</a></li>
+          <li><strong data-key="profile_phone">Phone:</strong> +54 9 11 3020 8941</li>
+          <li><strong data-key="profile_address">Address:</strong> Dr. Gabriel Ardoino 490, Ramos Mejía, Buenos Aires</li>
           <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jorge-daniel-gonzalez-8783a2112/" class="underline" target="_blank">https://www.linkedin.com/in/jorge-daniel-gonzalez-8783a2112/</a></li>
           <li><strong>GitHub:</strong> <a href="https://github.com/JorgeDaniel29" class="underline" target="_blank">https://github.com/JorgeDaniel29</a></li>
         </ul>
@@ -37,92 +40,92 @@
   </section>
 
   <section id="resumen" class="px-4 py-10 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-bold mb-6 border-b pb-2">Resumen Profesional</h3>
+    <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="summary_title">Professional Summary</h3>
     <p class="text-sm leading-relaxed">
-      Soy un desarrollador de software especializado en Android con más de 9 años de experiencia profesional en el sector tecnológico. Actualmente me desempeño como Líder Técnico de Software en Mercado Libre, liderando iniciativas estratégicas dentro del ecosistema de Mercado Pago.
+      <span data-key="summary_p1">I am a software developer specializing in Android with over 9 years of professional experience in the technology sector. I currently work as a Software Technical Lead at Mercado Libre, leading strategic initiatives within the Mercado Pago ecosystem.</span>
       <br /><br />
-      Tengo un enfoque sólido en arquitectura de software, especialmente Clean Architecture y MVVM, combinando excelencia técnica con habilidades de liderazgo para guiar equipos, definir estándares de calidad y optimizar procesos de desarrollo. Manejo herramientas modernas como Kotlin, coroutines, Retrofit, Koin, Git, CI/CD, y practico metodologías ágiles.
+      <span data-key="summary_p2">I have a strong focus on software architecture, especially Clean Architecture and MVVM, combining technical excellence with leadership skills to guide teams, define quality standards, and optimize development processes. I handle modern tools like Kotlin, coroutines, Retrofit, Koin, Git, CI/CD, and practice agile methodologies.</span>
       <br /><br />
-      Me apasiona construir soluciones escalables, eficientes y con impacto real en la experiencia del usuario. Busco constantemente desafíos que me permitan seguir creciendo profesionalmente y aportar valor a proyectos de alto impacto.
+      <span data-key="summary_p3">I am passionate about building scalable, efficient solutions with a real impact on the user experience. I am constantly looking for challenges that allow me to continue growing professionally and add value to high-impact projects.</span>
     </p>
   </section>
 
   <section id="experiencia" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2">Experiencia Profesional</h3>
+  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="experience_title">Professional Experience</h3>
   <div class="space-y-8">
     <div>
-      <h4 class="text-xl font-semibold">Mercado Libre — Líder Técnico de Software / Sr Android Developer</h4>
-      <span class="text-sm italic text-gray-500">Mayo 2019 – Actualidad</span>
+      <h4 class="text-xl font-semibold" data-key="exp1_title">Mercado Libre — Software Technical Lead / Sr Android Developer</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp1_date">May 2019 – Present</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Desarrollo y mantenimiento de funcionalidades del checkout de Mercado Pago y otras librerías clave del ecosistema.</li>
-        <li>Liderazgo técnico de equipo, definición de arquitectura, mentoring, revisión de código y planificación técnica.</li>
-        <li>Conocimientos sólidos en arquitectura limpia (MVVM, separación por capas, use cases), coroutines, Retrofit 2, Koin, DI, testing, CI/CD.</li>
-        <li>Integraciones con herramientas como Bugsnag, Kibana, Alation para métricas y debugging.</li>
+        <li data-key="exp1_li1">Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem.</li>
+        <li data-key="exp1_li2">Team technical leadership, architecture definition, mentoring, code review, and technical planning.</li>
+        <li data-key="exp1_li3">Solid knowledge in clean architecture (MVVM, layer separation, use cases), coroutines, Retrofit 2, Koin, DI, testing, CI/CD.</li>
+        <li data-key="exp1_li4">Integrations with tools like Bugsnag, Kibana, Alation for metrics and debugging.</li>
       </ul>
     </div>
     <div>
-      <h4 class="text-xl font-semibold">IguanaFix — Android Developer</h4>
-      <span class="text-sm italic text-gray-500">Marzo 2018 – Abril 2019</span>
+      <h4 class="text-xl font-semibold" data-key="exp2_title">IguanaFix — Android Developer</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp2_date">March 2018 – April 2019</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Desarrollo de la app para clientes de IguanaFix.</li>
-        <li>Stack: Kotlin, RxJava, Retrofit, Firebase, Room, ViewModel, Glide, Butter Knife, GoogleMaps API.</li>
-        <li>Uso de MVVM y componentes modernos de arquitectura de Android.</li>
+        <li data-key="exp2_li1">Development of the IguanaFix customer app.</li>
+        <li data-key="exp2_li2">Stack: Kotlin, RxJava, Retrofit, Firebase, Room, ViewModel, Glide, Butter Knife, GoogleMaps API.</li>
+        <li data-key="exp2_li3">Use of MVVM and modern Android architecture components.</li>
       </ul>
     </div>
     <div>
-      <h4 class="text-xl font-semibold">Fusap — Java Mobile Junior Programmer</h4>
-      <span class="text-sm italic text-gray-500">Abril 2016 – Febrero 2018</span>
+      <h4 class="text-xl font-semibold" data-key="exp3_title">Fusap — Java Mobile Junior Programmer</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp3_date">April 2016 – February 2018</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Desarrollo de apps Android para empresas privadas.</li>
-        <li>Tecnologías: Firebase, GoogleMaps API, Volley, EventBus, Glide.</li>
+        <li data-key="exp3_li1">Development of Android apps for private companies.</li>
+        <li data-key="exp3_li2">Technologies: Firebase, GoogleMaps API, Volley, EventBus, Glide.</li>
       </ul>
     </div>
     <div>
-      <h4 class="text-xl font-semibold">Codere Bingo — Técnico Electrónico</h4>
-      <span class="text-sm italic text-gray-500">Marzo 2015 – Marzo 2016</span>
+      <h4 class="text-xl font-semibold" data-key="exp4_title">Codere Bingo — Electronics Technician</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp4_date">March 2015 – March 2016</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Mantenimiento, limpieza y diagnóstico de máquinas electrónicas de juego.</li>
+        <li data-key="exp4_li1">Maintenance, cleaning, and diagnosis of electronic gaming machines.</li>
       </ul>
     </div>
     <div>
-      <h4 class="text-xl font-semibold">OSED Entidad Educativa — Atención al Cliente</h4>
-      <span class="text-sm italic text-gray-500">Diciembre 2011 – Enero 2014</span>
+      <h4 class="text-xl font-semibold" data-key="exp5_title">OSED Entidad Educativa — Customer Service</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp5_date">December 2011 – January 2014</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Atención al cliente, ventas, administración, apertura y cierre del local.</li>
+        <li data-key="exp5_li1">Customer service, sales, administration, opening and closing of the premises.</li>
       </ul>
     </div>
     <div>
-      <h4 class="text-xl font-semibold">Freelancer — Técnico en Electrónica</h4>
-      <span class="text-sm italic text-gray-500">2008 – 2010</span>
+      <h4 class="text-xl font-semibold" data-key="exp6_title">Freelancer — Electronics Technician</h4>
+      <span class="text-sm italic text-gray-500" data-key="exp6_date">2008 – 2010</span>
       <ul class="list-disc pl-5 mt-2 text-sm">
-        <li>Armado y soldadura de placas electrónicas a pedido de clientes particulares.</li>
+        <li data-key="exp6_li1">Assembly and soldering of electronic boards at the request of private clients.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section id="educacion" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2">Educación</h3>
+  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="education_title">Education</h3>
   <ul class="list-disc pl-5 text-sm space-y-4">
       <li>
-      <strong>Ingeniería en Informática</strong><br />
-      Universidad Nacional de La Matanza, Buenos Aires<br />
-      2014 – 2019<br />
-      (Formación universitaria avanzada en desarrollo de software y arquitectura de sistemas, cursada hasta tercer año)
+      <strong data-key="edu1_title">Computer Science Engineering</strong><br />
+      <span data-key="edu1_school">Universidad Nacional de La Matanza, Buenos Aires</span><br />
+      <span data-key="edu1_date">2014 – 2019</span><br />
+      <span data-key="edu1_desc">(Advanced university training in software development and systems architecture, completed up to the third year)</span>
     </li>
     <li>
-      <strong>Técnico Electrónico</strong><br />
-      E.E.T. Nº 8, Morón, Buenos Aires<br />
-      2006 – 2010
+      <strong data-key="edu2_title">Electronics Technician</strong><br />
+      <span data-key="edu2_school">E.E.T. Nº 8, Morón, Buenos Aires</span><br />
+      <span data-key="edu2_date">2006 – 2010</span>
     </li>
   </ul>
 </section>
 
 <section id="skills" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2">Skills Técnicos</h3>
+  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="skills_title">Technical Skills</h3>
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
     <div>
-      <h4 class="font-semibold">Lenguajes</h4>
+      <h4 class="font-semibold" data-key="skills_languages_title">Languages</h4>
       <ul class="list-disc list-inside">
         <li>Kotlin</li>
         <li>Java</li>
@@ -130,7 +133,7 @@
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold">Herramientas</h4>
+      <h4 class="font-semibold" data-key="skills_tools_title">Tools</h4>
       <ul class="list-disc list-inside">
         <li>Git</li>
         <li>Retrofit</li>
@@ -142,7 +145,7 @@
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold">Metodologías</h4>
+      <h4 class="font-semibold" data-key="skills_methodologies_title">Methodologies</h4>
       <ul class="list-disc list-inside">
         <li>Scrum</li>
         <li>Clean Architecture</li>
@@ -152,22 +155,23 @@
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold">Soft Skills</h4>
+      <h4 class="font-semibold" data-key="skills_soft_title">Soft Skills</h4>
       <ul class="list-disc list-inside">
-        <li>Comunicación efectiva</li>
-        <li>Trabajo en equipo</li>
-        <li>Proactividad</li>
-        <li>Orientación a resultados</li>
+        <li data-key="skills_soft_li1">Effective Communication</li>
+        <li data-key="skills_soft_li2">Teamwork</li>
+        <li data-key="skills_soft_li3">Proactivity</li>
+        <li data-key="skills_soft_li4">Results-oriented</li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold">Idiomas</h4>
+      <h4 class="font-semibold" data-key="skills_languages_section_title">Languages</h4>
       <ul class="list-disc list-inside">
-        <li>Español: Nativo</li>
-        <li>Inglés: Básico (en formación)</li>
+        <li data-key="skills_lang_li1">Spanish: Native</li>
+        <li data-key="skills_lang_li2">English: Basic (in training)</li>
       </ul>
     </div>
   </div>
 </section>
+<script src="translator.js" defer></script>
 </body>
 </html>
