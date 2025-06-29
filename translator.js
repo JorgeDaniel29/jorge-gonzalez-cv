@@ -3,7 +3,7 @@ const translations = {
     nav_summary: "Resumen",
     nav_experience: "Experiencia",
     nav_education: "Educación",
-    nav_skills: "Skills",
+    nav_skills: "Habilidades",
     nav_download_pdf: "Descargar PDF",
     profile_email: "Email:",
     profile_phone: "Teléfono:",
@@ -53,11 +53,11 @@ const translations = {
     edu3_poi2: "Proyecto de Formación Ocupacional",
     edu3_poi3: "Salud en el Trabajo",
     edu3_poi4: "Derecho Laboral",
-    skills_title: "Skills Técnicos",
+    skills_title: "Habilidades Técnicas",
     skills_languages_title: "Lenguajes",
     skills_tools_title: "Herramientas",
     skills_methodologies_title: "Metodologías",
-    skills_soft_title: "Soft Skills",
+    skills_soft_title: "Habilidades Blandas",
     skills_soft_li1: "Comunicación efectiva",
     skills_soft_li2: "Trabajo en equipo",
     skills_soft_li3: "Proactividad",
@@ -140,7 +140,15 @@ const downloadPdfButton = document.getElementById('download-pdf');
 
 let currentLang = localStorage.getItem('lang') || 'en';
 
+const updateButtonsText = () => {
+  // Actualizar todos los botones de cambio de idioma
+  document.querySelectorAll('[data-lang-switch], #lang-switcher').forEach(button => {
+    button.textContent = currentLang === 'en' ? 'ES' : 'EN';
+  });
+};
+
 const setLanguage = (lang) => {
+  currentLang = lang;
   const elements = document.querySelectorAll('[data-key]');
   elements.forEach(elem => {
     const key = elem.getAttribute('data-key');
@@ -151,7 +159,7 @@ const setLanguage = (lang) => {
   
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
-  langSwitcher.textContent = lang === 'en' ? 'ES' : 'EN';
+  updateButtonsText();
 };
 
 // Set up PDF download handler
@@ -164,12 +172,14 @@ if (downloadPdfButton) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    updateButtonsText(); // Asegurar que todos los botones estén actualizados
   });
 }
 
+// Language switcher
 langSwitcher.addEventListener('click', () => {
-  currentLang = currentLang === 'en' ? 'es' : 'en';
-  setLanguage(currentLang);
+  const newLang = currentLang === 'en' ? 'es' : 'en';
+  setLanguage(newLang);
 });
 
 // Set initial language on page load
