@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jorge Daniel Gonzalez - CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .loading {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .loading::after {
+      content: '';
+      position: absolute;
+      width: 1.2em;
+      height: 1.2em;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-right-color: transparent;
+      animation: spin 0.8s linear infinite;
+      right: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @keyframes spin {
+      to { transform: translateY(-50%) rotate(360deg); }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
   <header class="sticky top-0 bg-white dark:bg-gray-900 z-50 shadow p-4 flex justify-between items-center">
@@ -15,7 +38,7 @@
         <a href="#experiencia" class="hover:underline" data-key="nav_experience">Experience</a>
         <a href="#educacion" class="hover:underline" data-key="nav_education">Education</a>
         <a href="#skills" class="hover:underline" data-key="nav_skills">Skills</a>
-        <a href="docs/curriculum-vitae.pdf" download class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded hover:bg-blue-700 transition" data-key="nav_download_pdf">Download PDF</a>
+        <button id="download-pdf" class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded hover:bg-blue-700 transition" data-key="nav_download_pdf">Download PDF</button>
       </nav>
       <button id="lang-switcher" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-sm font-semibold rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition">
         ES
@@ -51,127 +74,141 @@
   </section>
 
   <section id="experiencia" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="experience_title">Professional Experience</h3>
-  <div class="space-y-8">
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp1_title">Mercado Libre — Software Technical Lead / Sr Android Developer</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp1_date">May 2019 – Present</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp1_li1">Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem.</li>
-        <li data-key="exp1_li2">Team technical leadership, architecture definition, mentoring, code review, and technical planning.</li>
-        <li data-key="exp1_li3">Solid knowledge in clean architecture (MVVM, layer separation, use cases), coroutines, Retrofit 2, Koin, DI, testing, CI/CD.</li>
-        <li data-key="exp1_li4">Integrations with tools like Bugsnag, Kibana, Alation for metrics and debugging.</li>
-      </ul>
+    <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="experience_title">Professional Experience</h3>
+    <div class="space-y-8">
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp1_title">Mercado Libre — Software Technical Lead / Sr Android Developer</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp1_date">May 2019 – Present</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp1_li1">Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem (card art, card enrollment, security code encrypted, Payment link).</li>
+          <li data-key="exp1_li2">Team technical leadership, architecture definition, mentoring, code review, and technical planning.</li>
+          <li data-key="exp1_li3">Solid knowledge in clean architecture (MVVM, layer separation by responsibility, use cases), coroutines, Retrofit 2, Picasso, Koin and Service locator for dependency injection, android services, unit testing, CI/CD.</li>
+          <li data-key="exp1_li4">Integrations with tools like Bugsnag for tracking bugs, Kibana for tracking backend logs, and Alation for business metrics.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp2_title">IguanaFix — Android Developer</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp2_date">March 2018 – April 2019</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp2_li1">Development and maintenance of the IguanaFix customer app.</li>
+          <li data-key="exp2_li2">Stack: Kotlin, RxJava, Retrofit 2, Firebase (Crashlytics, Analytics, Cloud-messaging), Room, ViewModel, Glide, Butter Knife, GoogleMaps API, Fresco, Picasso.</li>
+          <li data-key="exp2_li3">Implementation of Android Architecture Components (LiveData, ViewModel, Room), MVVM pattern, and Material Design.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp3_title">Fusap — Java Mobile Junior Programmer</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp3_date">April 2016 – February 2018</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp3_li1">Development of Android apps for private companies.</li>
+          <li data-key="exp3_li2">Technologies: Firebase, GoogleMaps API, Volley, EventBus, Glide.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp4_title">Codere Bingo — Electronics Technician</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp4_date">March 2015 – March 2016</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp4_li1">Maintenance, cleaning, and diagnosis of electronic gaming machines.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp5_title">OSED Entidad Educativa — Customer Service</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp5_date">December 2011 – January 2014</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp5_li1">Customer service, sales, administration, opening and closing of the premises.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold" data-key="exp6_title">Freelancer — Electronics Technician</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp6_date">2008 – 2010</span>
+        <ul class="list-disc pl-5 mt-2 text-sm">
+          <li data-key="exp6_li1">Assembly and soldering of electronic boards at the request of private clients.</li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp2_title">IguanaFix — Android Developer</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp2_date">March 2018 – April 2019</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp2_li1">Development of the IguanaFix customer app.</li>
-        <li data-key="exp2_li2">Stack: Kotlin, RxJava, Retrofit, Firebase, Room, ViewModel, Glide, Butter Knife, GoogleMaps API.</li>
-        <li data-key="exp2_li3">Use of MVVM and modern Android architecture components.</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp3_title">Fusap — Java Mobile Junior Programmer</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp3_date">April 2016 – February 2018</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp3_li1">Development of Android apps for private companies.</li>
-        <li data-key="exp3_li2">Technologies: Firebase, GoogleMaps API, Volley, EventBus, Glide.</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp4_title">Codere Bingo — Electronics Technician</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp4_date">March 2015 – March 2016</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp4_li1">Maintenance, cleaning, and diagnosis of electronic gaming machines.</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp5_title">OSED Entidad Educativa — Customer Service</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp5_date">December 2011 – January 2014</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp5_li1">Customer service, sales, administration, opening and closing of the premises.</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-xl font-semibold" data-key="exp6_title">Freelancer — Electronics Technician</h4>
-      <span class="text-sm italic text-gray-500" data-key="exp6_date">2008 – 2010</span>
-      <ul class="list-disc pl-5 mt-2 text-sm">
-        <li data-key="exp6_li1">Assembly and soldering of electronic boards at the request of private clients.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="educacion" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="education_title">Education</h3>
-  <ul class="list-disc pl-5 text-sm space-y-4">
+  <section id="educacion" class="px-4 py-10 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="education_title">Education</h3>
+    <ul class="list-disc pl-5 text-sm space-y-4">
       <li>
-      <strong data-key="edu1_title">Computer Science Engineering</strong><br />
-      <span data-key="edu1_school">Universidad Nacional de La Matanza, Buenos Aires</span><br />
-      <span data-key="edu1_date">2014 – 2019</span><br />
-      <span data-key="edu1_desc">(Advanced university training in software development and systems architecture, completed up to the third year)</span>
-    </li>
-    <li>
-      <strong data-key="edu2_title">Electronics Technician</strong><br />
-      <span data-key="edu2_school">E.E.T. Nº 8, Morón, Buenos Aires</span><br />
-      <span data-key="edu2_date">2006 – 2010</span>
-    </li>
-  </ul>
-</section>
+        <strong data-key="edu1_title">Computer Science Engineering</strong><br />
+        <span data-key="edu1_school">Universidad Nacional de La Matanza, Buenos Aires</span><br />
+        <span data-key="edu1_date">2014 – 2019</span><br />
+        <span data-key="edu1_desc">(Advanced university training in software development and systems architecture, completed up to the third year)</span>
+      </li>
+      <li>
+        <strong data-key="edu2_title">Electronics Technician</strong><br />
+        <span data-key="edu2_school">E.E.T. Nº 8, Morón, Buenos Aires</span><br />
+        <span data-key="edu2_date">2006 – 2010</span>
+      </li>
+      <li>
+        <strong data-key="edu3_title">Additional Certifications</strong>
+        <ul class="list-disc pl-5 mt-2">
+          <li data-key="edu3_cert1">PC Repair and Assembly Technician (2010)</li>
+          <li data-key="edu3_cert2">Cell Phone Repair Technician (2010)</li>
+          <li data-key="edu3_cert3">Work Orientation and Induction Program (POI)</li>
+          <ul class="list-disc pl-5 mt-1">
+            <li data-key="edu3_poi1">Computing</li>
+            <li data-key="edu3_poi2">Occupational Training Project</li>
+            <li data-key="edu3_poi3">Workplace Health and Safety</li>
+            <li data-key="edu3_poi4">Labor Rights</li>
+          </ul>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-<section id="skills" class="px-4 py-10 max-w-4xl mx-auto">
-  <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="skills_title">Technical Skills</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-    <div>
-      <h4 class="font-semibold" data-key="skills_languages_title">Languages</h4>
-      <ul class="list-disc list-inside">
-        <li>Kotlin</li>
-        <li>Java</li>
-        <li>C</li>
-      </ul>
+  <section id="skills" class="px-4 py-10 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 border-b pb-2" data-key="skills_title">Technical Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+      <div>
+        <h4 class="font-semibold" data-key="skills_languages_title">Languages</h4>
+        <ul class="list-disc list-inside">
+          <li>Kotlin</li>
+          <li>Java</li>
+          <li>C</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold" data-key="skills_tools_title">Tools</h4>
+        <ul class="list-disc list-inside">
+          <li>Git</li>
+          <li>Retrofit</li>
+          <li>Koin</li>
+          <li>Firebase</li>
+          <li>Room</li>
+          <li>Glide</li>
+          <li>Picasso</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold" data-key="skills_methodologies_title">Methodologies</h4>
+        <ul class="list-disc list-inside">
+          <li>Scrum</li>
+          <li>Clean Architecture</li>
+          <li>MVVM</li>
+          <li>CI/CD</li>
+          <li>Unit Testing</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold" data-key="skills_soft_title">Soft Skills</h4>
+        <ul class="list-disc list-inside">
+          <li data-key="skills_soft_li1">Effective Communication</li>
+          <li data-key="skills_soft_li2">Teamwork</li>
+          <li data-key="skills_soft_li3">Proactivity</li>
+          <li data-key="skills_soft_li4">Results-oriented</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold" data-key="skills_languages_section_title">Languages</h4>
+        <ul class="list-disc list-inside">
+          <li data-key="skills_lang_li1">Spanish: Native</li>
+          <li data-key="skills_lang_li2">English: Basic (in training)</li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4 class="font-semibold" data-key="skills_tools_title">Tools</h4>
-      <ul class="list-disc list-inside">
-        <li>Git</li>
-        <li>Retrofit</li>
-        <li>Koin</li>
-        <li>Firebase</li>
-        <li>Room</li>
-        <li>Glide</li>
-        <li>Picasso</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold" data-key="skills_methodologies_title">Methodologies</h4>
-      <ul class="list-disc list-inside">
-        <li>Scrum</li>
-        <li>Clean Architecture</li>
-        <li>MVVM</li>
-        <li>CI/CD</li>
-        <li>Unit Testing</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold" data-key="skills_soft_title">Soft Skills</h4>
-      <ul class="list-disc list-inside">
-        <li data-key="skills_soft_li1">Effective Communication</li>
-        <li data-key="skills_soft_li2">Teamwork</li>
-        <li data-key="skills_soft_li3">Proactivity</li>
-        <li data-key="skills_soft_li4">Results-oriented</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold" data-key="skills_languages_section_title">Languages</h4>
-      <ul class="list-disc list-inside">
-        <li data-key="skills_lang_li1">Spanish: Native</li>
-        <li data-key="skills_lang_li2">English: Basic (in training)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<script src="translator.js" defer></script>
+  </section>
+  <script src="translator.js"></script>
 </body>
 </html>

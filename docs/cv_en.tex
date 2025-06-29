@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+
+% Define colors
+\definecolor{primary}{RGB}{50,50,50}
+\definecolor{accent}{RGB}{0,70,140}
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent
+}
+
+% Configure section titles
+\titleformat{\section}
+    {\Large\bfseries\color{accent}}
+    {}{0em}
+    {}[\titlerule]
+\titlespacing*{\section}
+    {0pt}{12pt}{8pt}
+
+% Personal Info Command
+\newcommand{\personalinfo}[1]{{\large #1}}
+
+% Header Command
+\newcommand{\cvheader}[1]{{\LARGE\bfseries\color{primary} #1}}
+
+% Job title command with date below
+\newcommand{\jobtitle}[2]{
+    \noindent\textbf{#1}\\
+    \textit{#2}\par\vspace{0.5em}
+}
+
+\begin{document}
+
+% Header with more spacing
+\begin{center}
+\cvheader{Jorge Daniel Gonzalez}
+\vspace{1.5em}  % Increased spacing
+{\large\color{accent}\textbf{Software Developer}}
+\end{center}
+
+\vspace{1.5em}  % Increased spacing after title
+
+% Contact information
+\begin{center}
+\begin{tabular}{r l}
+\faEnvelope & \href{mailto:jorgedaniel29.jg@gmail.com}{jorgedaniel29.jg@gmail.com} \\[0.3em]
+\faPhone & +54 9 11 3020 8941 \\[0.3em]
+\faMapMarker & Dr. Gabriel Ardoino 490, Ramos Mejía, Buenos Aires \\[0.3em]
+\faLinkedin & \href{https://www.linkedin.com/in/jorge-daniel-gonzalez-8783a2112/}{jorge-daniel-gonzalez} \\[0.3em]
+\faGithub & \href{https://github.com/JorgeDaniel29}{JorgeDaniel29}
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\section{Professional Summary}
+I am a software developer specializing in Android with over 9 years of professional experience in the technology sector. I currently work as a Software Technical Lead at Mercado Libre, leading strategic initiatives within the Mercado Pago ecosystem.
+
+I have a strong focus on software architecture, especially Clean Architecture and MVVM, combining technical excellence with leadership skills to guide teams, define quality standards, and optimize development processes. I handle modern tools like Kotlin, coroutines, Retrofit, Koin, Git, CI/CD, and practice agile methodologies.
+
+I am passionate about building scalable, efficient solutions with a real impact on the user experience. I am constantly looking for challenges that allow me to continue growing professionally and add value to high-impact projects.
+
+\section{Professional Experience}
+
+\jobtitle{Mercado Libre — Software Technical Lead / Sr Android Developer}{May 2019 – Present}
+\begin{itemize}[leftmargin=*]
+    \item Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem (card art, card enrollment, security code encrypted, Payment link).
+    \item Team technical leadership, architecture definition, mentoring, code review, and technical planning.
+    \item Solid knowledge in clean architecture (MVVM, layer separation by responsibility, use cases), coroutines, Retrofit 2, Picasso, Koin and Service locator for dependency injection, android services, unit testing, CI/CD.
+    \item Integrations with tools like Bugsnag for tracking bugs, Kibana for tracking backend logs, and Alation for business metrics.
+\end{itemize}
+
+\jobtitle{IguanaFix — Android Developer}{March 2018 – April 2019}
+\begin{itemize}[leftmargin=*]
+    \item Development and maintenance of the IguanaFix customer app.
+    \item Stack: Kotlin, RxJava, Retrofit 2, Firebase (Crashlytics, Analytics, Cloud-messaging), Room, ViewModel, Glide, Butter Knife, GoogleMaps API, Fresco, Picasso.
+    \item Implementation of Android Architecture Components (LiveData, ViewModel, Room), MVVM pattern, and Material Design.
+\end{itemize}
+
+\jobtitle{Fusap — Java Mobile Junior Programmer}{April 2016 – February 2018}
+\begin{itemize}[leftmargin=*]
+    \item Development of Android apps for private companies.
+    \item Technologies: Firebase, GoogleMaps API, Volley, EventBus, Glide.
+\end{itemize}
+
+\jobtitle{Codere Bingo — Electronics Technician}{March 2015 – March 2016}
+\begin{itemize}[leftmargin=*]
+    \item Maintenance, cleaning, and diagnosis of electronic gaming machines.
+\end{itemize}
+
+\jobtitle{OSED Entidad Educativa — Customer Service}{December 2011 – January 2014}
+\begin{itemize}[leftmargin=*]
+    \item Customer service, sales, administration, opening and closing of the premises.
+\end{itemize}
+
+\jobtitle{Freelancer — Electronics Technician}{2008 – 2010}
+\begin{itemize}[leftmargin=*]
+    \item Assembly and soldering of electronic boards at the request of private clients.
+\end{itemize}
+
+\section{Education}
+
+\textbf{Computer Science Engineering}
+\begin{itemize}[leftmargin=*]
+    \item Universidad Nacional de La Matanza, Buenos Aires (2014 – 2019)
+    \item Advanced university training in software development and systems architecture, completed up to the third year
+\end{itemize}
+
+\textbf{Electronics Technician}
+\begin{itemize}[leftmargin=*]
+    \item E.E.T. Nº 8, Morón, Buenos Aires (2006 – 2010)
+\end{itemize}
+
+\textbf{Additional Certifications}
+\begin{itemize}[leftmargin=*]
+    \item PC Repair and Assembly Technician (2010)
+    \item Cell Phone Repair Technician (2010)
+    \item Work Orientation and Induction Program (POI)
+    \begin{itemize}
+        \item Computing
+        \item Occupational Training Project
+        \item Workplace Health and Safety
+        \item Labor Rights
+    \end{itemize}
+\end{itemize}
+
+\section{Technical Skills}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Programming Languages:} Kotlin, Java, C
+    \item \textbf{Tools:} Git, Retrofit, Koin, Firebase, Room, Glide, Picasso
+    \item \textbf{Methodologies:} Scrum, Clean Architecture, MVVM, CI/CD, Unit Testing
+    \item \textbf{Soft Skills:} Effective Communication, Teamwork, Proactivity, Results-oriented
+    \item \textbf{Languages:} Spanish (Native), English (Basic, in training)
+\end{itemize}
+
+\end{document} 

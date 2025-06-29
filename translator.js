@@ -15,15 +15,15 @@ const translations = {
     experience_title: "Experiencia Profesional",
     exp1_title: "Mercado Libre — Líder Técnico de Software / Sr Android Developer",
     exp1_date: "Mayo 2019 – Actualidad",
-    exp1_li1: "Desarrollo y mantenimiento de funcionalidades del checkout de Mercado Pago y otras librerías clave del ecosistema.",
+    exp1_li1: "Desarrollo y mantenimiento de funcionalidades del checkout de Mercado Pago y otras librerías clave del ecosistema (card art, card enrollment, security code encrypted, Payment link).",
     exp1_li2: "Liderazgo técnico de equipo, definición de arquitectura, mentoring, revisión de código y planificación técnica.",
-    exp1_li3: "Conocimientos sólidos en arquitectura limpia (MVVM, separación por capas, use cases), coroutines, Retrofit 2, Koin, DI, testing, CI/CD.",
-    exp1_li4: "Integraciones con herramientas como Bugsnag, Kibana, Alation para métricas y debugging.",
+    exp1_li3: "Conocimientos sólidos en arquitectura limpia (MVVM, separación por capas y responsabilidades, use cases), coroutines, Retrofit 2, Picasso, Koin y Service locator para inyección de dependencias, servicios de Android, testing unitario, CI/CD.",
+    exp1_li4: "Integraciones con herramientas como Bugsnag para seguimiento de errores, Kibana para logs de backend y Alation para métricas de negocio.",
     exp2_title: "IguanaFix — Android Developer",
     exp2_date: "Marzo 2018 – Abril 2019",
-    exp2_li1: "Desarrollo de la app para clientes de IguanaFix.",
-    exp2_li2: "Stack: Kotlin, RxJava, Retrofit, Firebase, Room, ViewModel, Glide, Butter Knife, GoogleMaps API.",
-    exp2_li3: "Uso de MVVM y componentes modernos de arquitectura de Android.",
+    exp2_li1: "Desarrollo y mantenimiento de la aplicación para clientes de IguanaFix.",
+    exp2_li2: "Stack: Kotlin, RxJava, Retrofit 2, Firebase (Crashlytics, Analytics, Cloud-messaging), Room, ViewModel, Glide, Butter Knife, GoogleMaps API, Fresco, Picasso.",
+    exp2_li3: "Implementación de Android Architecture Components (LiveData, ViewModel, Room), patrón MVVM y Material Design.",
     exp3_title: "Fusap — Java Mobile Junior Programmer",
     exp3_date: "Abril 2016 – Febrero 2018",
     exp3_li1: "Desarrollo de apps Android para empresas privadas.",
@@ -45,6 +45,14 @@ const translations = {
     edu2_title: "Técnico Electrónico",
     edu2_school: "E.E.T. Nº 8, Morón, Buenos Aires",
     edu2_date: "2006 – 2010",
+    edu3_title: "Certificaciones Adicionales",
+    edu3_cert1: "Técnico en Reparación y Armado de PC (2010)",
+    edu3_cert2: "Técnico en Reparación de Celulares (2010)",
+    edu3_cert3: "Programa de Orientación e Inducción al Mundo del Trabajo (POI)",
+    edu3_poi1: "Computación",
+    edu3_poi2: "Proyecto de Formación Ocupacional",
+    edu3_poi3: "Salud en el Trabajo",
+    edu3_poi4: "Derecho Laboral",
     skills_title: "Skills Técnicos",
     skills_languages_title: "Lenguajes",
     skills_tools_title: "Herramientas",
@@ -74,15 +82,15 @@ const translations = {
     experience_title: "Professional Experience",
     exp1_title: "Mercado Libre — Software Technical Lead / Sr Android Developer",
     exp1_date: "May 2019 – Present",
-    exp1_li1: "Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem.",
+    exp1_li1: "Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem (card art, card enrollment, security code encrypted, Payment link).",
     exp1_li2: "Team technical leadership, architecture definition, mentoring, code review, and technical planning.",
-    exp1_li3: "Solid knowledge in clean architecture (MVVM, layer separation, use cases), coroutines, Retrofit 2, Koin, DI, testing, CI/CD.",
-    exp1_li4: "Integrations with tools like Bugsnag, Kibana, Alation for metrics and debugging.",
+    exp1_li3: "Solid knowledge in clean architecture (MVVM, layer separation by responsibility, use cases), coroutines, Retrofit 2, Picasso, Koin and Service locator for dependency injection, android services, unit testing, CI/CD.",
+    exp1_li4: "Integrations with tools like Bugsnag for tracking bugs, Kibana for tracking backend logs, and Alation for business metrics.",
     exp2_title: "IguanaFix — Android Developer",
     exp2_date: "March 2018 – April 2019",
-    exp2_li1: "Development of the IguanaFix customer app.",
-    exp2_li2: "Stack: Kotlin, RxJava, Retrofit, Firebase, Room, ViewModel, Glide, Butter Knife, GoogleMaps API.",
-    exp2_li3: "Use of MVVM and modern Android architecture components.",
+    exp2_li1: "Development and maintenance of the IguanaFix customer app.",
+    exp2_li2: "Stack: Kotlin, RxJava, Retrofit 2, Firebase (Crashlytics, Analytics, Cloud-messaging), Room, ViewModel, Glide, Butter Knife, GoogleMaps API, Fresco, Picasso.",
+    exp2_li3: "Implementation of Android Architecture Components (LiveData, ViewModel, Room), MVVM pattern, and Material Design.",
     exp3_title: "Fusap — Java Mobile Junior Programmer",
     exp3_date: "April 2016 – February 2018",
     exp3_li1: "Development of Android apps for private companies.",
@@ -104,6 +112,14 @@ const translations = {
     edu2_title: "Electronics Technician",
     edu2_school: "E.E.T. Nº 8, Morón, Buenos Aires",
     edu2_date: "2006 – 2010",
+    edu3_title: "Additional Certifications",
+    edu3_cert1: "PC Repair and Assembly Technician (2010)",
+    edu3_cert2: "Cell Phone Repair Technician (2010)",
+    edu3_cert3: "Work Orientation and Induction Program (POI)",
+    edu3_poi1: "Computing",
+    edu3_poi2: "Occupational Training Project",
+    edu3_poi3: "Workplace Health and Safety",
+    edu3_poi4: "Labor Rights",
     skills_title: "Technical Skills",
     skills_languages_title: "Languages",
     skills_tools_title: "Tools",
@@ -120,6 +136,7 @@ const translations = {
 };
 
 const langSwitcher = document.getElementById('lang-switcher');
+const downloadPdfButton = document.getElementById('download-pdf');
 
 let currentLang = localStorage.getItem('lang') || 'en';
 
@@ -131,11 +148,24 @@ const setLanguage = (lang) => {
       elem.textContent = translations[lang][key];
     }
   });
+  
   document.documentElement.lang = lang;
   localStorage.setItem('lang', lang);
-
   langSwitcher.textContent = lang === 'en' ? 'ES' : 'EN';
 };
+
+// Set up PDF download handler
+if (downloadPdfButton) {
+  downloadPdfButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = `docs/cv_${currentLang}.pdf`;
+    link.download = `cv_${currentLang}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
 
 langSwitcher.addEventListener('click', () => {
   currentLang = currentLang === 'en' ? 'es' : 'en';

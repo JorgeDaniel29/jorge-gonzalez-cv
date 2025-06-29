@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+
+% Define colors
+\definecolor{primary}{RGB}{50,50,50}
+\definecolor{accent}{RGB}{0,70,140}
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent
+}
+
+% Configure section titles
+\titleformat{\section}
+    {\Large\bfseries\color{accent}}
+    {}{0em}
+    {}[\titlerule]
+\titlespacing*{\section}
+    {0pt}{12pt}{8pt}
+
+% Personal Info Command
+\newcommand{\personalinfo}[1]{{\large #1}}
+
+% Header Command
+\newcommand{\cvheader}[1]{{\LARGE\bfseries\color{primary} #1}}
+
+% Job title command with date below
+\newcommand{\jobtitle}[2]{
+    \noindent\textbf{#1}\\
+    \textit{#2}\par\vspace{0.5em}
+}
+
+\begin{document}
+
+% Header with more spacing
+\begin{center}
+\cvheader{Jorge Daniel Gonzalez}
+\vspace{1.5em}  % Increased spacing
+{\large\color{accent}\textbf{Software Developer}}
+\end{center}
+
+\vspace{1.5em}  % Increased spacing after title
+
+% Contact information
+\begin{center}
+\begin{tabular}{r l}
+\faEnvelope & \href{mailto:jorgedaniel29.jg@gmail.com}{jorgedaniel29.jg@gmail.com} \\[0.3em]
+\faPhone & +54 9 11 3020 8941 \\[0.3em]
+\faMapMarker & Dr. Gabriel Ardoino 490, Ramos Mejía, Buenos Aires \\[0.3em]
+\faLinkedin & \href{https://www.linkedin.com/in/jorge-daniel-gonzalez-8783a2112/}{jorge-daniel-gonzalez} \\[0.3em]
+\faGithub & \href{https://github.com/JorgeDaniel29}{JorgeDaniel29}
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\section{Resumen Profesional}
+Soy un desarrollador de software especializado en Android con más de 9 años de experiencia profesional en el sector tecnológico. Actualmente me desempeño como Líder Técnico de Software en Mercado Libre, liderando iniciativas estratégicas dentro del ecosistema de Mercado Pago.
+
+Tengo un enfoque sólido en arquitectura de software, especialmente Clean Architecture y MVVM, combinando excelencia técnica con habilidades de liderazgo para guiar equipos, definir estándares de calidad y optimizar procesos de desarrollo. Manejo herramientas modernas como Kotlin, coroutines, Retrofit, Koin, Git, CI/CD, y practico metodologías ágiles.
+
+Me apasiona construir soluciones escalables, eficientes y con impacto real en la experiencia del usuario. Busco constantemente desafíos que me permitan seguir creciendo profesionalmente y aportar valor a proyectos de alto impacto.
+
+\section{Experiencia Profesional}
+
+\jobtitle{Mercado Libre — Líder Técnico de Software / Sr Android Developer}{Mayo 2019 – Actualidad}
+\begin{itemize}[leftmargin=*]
+    \item Desarrollo y mantenimiento de funcionalidades del checkout de Mercado Pago y otras librerías clave del ecosistema (card art, card enrollment, security code encrypted, Payment link).
+    \item Liderazgo técnico de equipo, definición de arquitectura, mentoring, revisión de código y planificación técnica.
+    \item Conocimientos sólidos en arquitectura limpia (MVVM, separación por capas y responsabilidades, use cases), coroutines, Retrofit 2, Picasso, Koin y Service locator para inyección de dependencias, servicios de Android, testing unitario, CI/CD.
+    \item Integraciones con herramientas como Bugsnag para seguimiento de errores, Kibana para logs de backend y Alation para métricas de negocio.
+\end{itemize}
+
+\jobtitle{IguanaFix — Android Developer}{Marzo 2018 – Abril 2019}
+\begin{itemize}[leftmargin=*]
+    \item Desarrollo y mantenimiento de la aplicación para clientes de IguanaFix.
+    \item Stack: Kotlin, RxJava, Retrofit 2, Firebase (Crashlytics, Analytics, Cloud-messaging), Room, ViewModel, Glide, Butter Knife, GoogleMaps API, Fresco, Picasso.
+    \item Implementación de Android Architecture Components (LiveData, ViewModel, Room), patrón MVVM y Material Design.
+\end{itemize}
+
+\jobtitle{Fusap — Java Mobile Junior Programmer}{Abril 2016 – Febrero 2018}
+\begin{itemize}[leftmargin=*]
+    \item Desarrollo de apps Android para empresas privadas.
+    \item Tecnologías: Firebase, GoogleMaps API, Volley, EventBus, Glide.
+\end{itemize}
+
+\jobtitle{Codere Bingo — Técnico Electrónico}{Marzo 2015 – Marzo 2016}
+\begin{itemize}[leftmargin=*]
+    \item Mantenimiento, limpieza y diagnóstico de máquinas electrónicas de juego.
+\end{itemize}
+
+\jobtitle{OSED Entidad Educativa — Atención al Cliente}{Diciembre 2011 – Enero 2014}
+\begin{itemize}[leftmargin=*]
+    \item Atención al cliente, ventas, administración, apertura y cierre del local.
+\end{itemize}
+
+\jobtitle{Freelancer — Técnico en Electrónica}{2008 – 2010}
+\begin{itemize}[leftmargin=*]
+    \item Armado y soldadura de placas electrónicas a pedido de clientes particulares.
+\end{itemize}
+
+\section{Educación}
+
+\textbf{Ingeniería en Informática}
+\begin{itemize}[leftmargin=*]
+    \item Universidad Nacional de La Matanza, Buenos Aires (2014 – 2019)
+    \item Formación universitaria avanzada en desarrollo de software y arquitectura de sistemas, cursada hasta tercer año
+\end{itemize}
+
+\textbf{Técnico Electrónico}
+\begin{itemize}[leftmargin=*]
+    \item E.E.T. Nº 8, Morón, Buenos Aires (2006 – 2010)
+\end{itemize}
+
+\textbf{Certificaciones Adicionales}
+\begin{itemize}[leftmargin=*]
+    \item Técnico en Reparación y Armado de PC (2010)
+    \item Técnico en Reparación de Celulares (2010)
+    \item Programa de Orientación e Inducción al Mundo del Trabajo (POI)
+    \begin{itemize}
+        \item Computación
+        \item Proyecto de Formación Ocupacional
+        \item Salud en el Trabajo
+        \item Derecho Laboral
+    \end{itemize}
+\end{itemize}
+
+\section{Skills Técnicos}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Lenguajes de Programación:} Kotlin, Java, C
+    \item \textbf{Herramientas:} Git, Retrofit, Koin, Firebase, Room, Glide, Picasso
+    \item \textbf{Metodologías:} Scrum, Clean Architecture, MVVM, CI/CD, Unit Testing
+    \item \textbf{Soft Skills:} Comunicación efectiva, Trabajo en equipo, Proactividad, Orientación a resultados
+    \item \textbf{Idiomas:} Español (Nativo), Inglés (Básico, en formación)
+\end{itemize}
+
+\end{document} 
