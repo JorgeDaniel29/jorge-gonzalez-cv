@@ -114,11 +114,10 @@
     <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-6">
       <img src="img/profile.jpeg" alt="Foto de Jorge Daniel Gonzalez" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-gray-300 dark:border-gray-700" />
       <div class="text-center sm:text-left">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-2">Software Developer</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-2" data-key="profile_role">Android Technical Lead</h2>
         <ul class="text-sm space-y-1">
           <li><strong data-key="profile_email">Email:</strong> <a href="mailto:jorgedaniel29.jg@gmail.com" class="underline break-all">jorgedaniel29.jg@gmail.com</a></li>
-          <li><strong data-key="profile_phone">Phone:</strong> <a href="tel:[removed]" class="hover:underline">[removed]</a></li>
-          <li><strong data-key="profile_address">Address:</strong> <span class="break-words">[removed], Ramos Mejía, Buenos Aires</span></li>
+          <li><strong data-key="profile_location">Location:</strong> <span class="break-words">Ramos Mejía, Buenos Aires, Argentina</span></li>
           <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jorge-daniel-gonzalez-8783a2112/" class="underline break-all" target="_blank">jorge-daniel-gonzalez</a></li>
           <li><strong>GitHub:</strong> <a href="https://github.com/JorgeDaniel29" class="underline" target="_blank">JorgeDaniel29</a></li>
         </ul>
@@ -129,7 +128,7 @@
   <section id="resumen" class="px-4 py-6 sm:py-10 max-w-4xl mx-auto">
     <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b pb-2" data-key="summary_title">Professional Summary</h3>
     <p class="text-sm sm:text-base leading-relaxed">
-      <span data-key="summary_p1">I am a software developer specializing in Android with over 9 years of experience, currently working as a Software Technical Lead at Mercado Libre. I possess a comprehensive understanding of Android development lifecycles, frameworks, architecture components, mobile analytics, and agile methodologies.</span>
+      <span data-key="summary_p1">Android Technical Lead with over 10 years in mobile development, the last three leading teams in Argentina and Brazil. I possess a comprehensive understanding of Android development lifecycles, frameworks, architecture components, mobile analytics, Jetpack Compose, and agile methodologies.</span>
       <br /><br />
       <span data-key="summary_p2">I have a strong focus on software architecture, especially Clean Architecture and MVVM, combining technical excellence with leadership skills to guide teams and define quality standards. I am dedicated to implementing new technologies to produce scalable, maintainable, innovative, and robust applications within the Mercado Pago ecosystem.</span>
       <br /><br />
@@ -141,13 +140,29 @@
     <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b pb-2" data-key="experience_title">Professional Experience</h3>
     <div class="space-y-6 sm:space-y-8">
       <div>
-        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp1_title">Mercado Libre — Software Technical Lead / Sr Android Developer</h4>
-        <span class="text-sm italic text-gray-500" data-key="exp1_date">May 2019 – Present</span>
+        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp1_title">Mercado Libre — Technical Lead</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp1_date">March 2023 – Present</span>
         <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
-          <li data-key="exp1_li1">Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem (card art, card enrollment, security code encrypted, Payment link).</li>
-          <li data-key="exp1_li2">Team technical leadership, architecture definition, mentoring, code review, and technical planning.</li>
-          <li data-key="exp1_li3">Solid knowledge in clean architecture (MVVM, layer separation by responsibility, use cases), coroutines, Retrofit 2, Picasso, Koin and Service locator for dependency injection, android services, unit testing, CI/CD.</li>
-          <li data-key="exp1_li4">Integrations with tools like Bugsnag for tracking bugs, Kibana for tracking backend logs, and Alation for business metrics.</li>
+          <li data-key="exp1_li1">Technical leadership of distributed teams in Argentina and Brazil: architecture definition, mentoring, code review, technical planning, and technical interviews.</li>
+          <li data-key="exp1_li2">Development of complete production flows with Jetpack Compose (card enrollment, security code encrypted, etc.).</li>
+          <li data-key="exp1_li3">Build and release automation: custom scripts integrated into the Gradle lifecycle and executed from CI, including mobile app hardening (obfuscation and encryption) of .aar artifacts.</li>
+          <li data-key="exp1_li4">Observability and product analysis: error diagnosis with Bugsnag, backend logs with Kibana and Grafana, and querying user event and screen-view tracks in BigQuery.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp1b_title">Mercado Libre — Senior Android Developer</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp1b_date">March 2021 – March 2023</span>
+        <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
+          <li data-key="exp1b_li1">Development and maintenance of features for the Mercado Pago checkout and other key libraries of the ecosystem (card art, card enrollment, security code encrypted, Payment link).</li>
+          <li data-key="exp1b_li2">Clean architecture (MVVM, layer separation by responsibility, use cases), coroutines, Retrofit 2, Picasso, Koin and Service locator for dependency injection, android services.</li>
+          <li data-key="exp1b_li3">Unit testing and CI/CD.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp1c_title">Mercado Libre — Ssr Android Developer</h4>
+        <span class="text-sm italic text-gray-500" data-key="exp1c_date">May 2019 – March 2021</span>
+        <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
+          <li data-key="exp1c_li1">Feature development within the Mercado Pago mobile ecosystem in Kotlin, applying MVVM and the team's architecture patterns.</li>
         </ul>
       </div>
       <div>
@@ -168,24 +183,11 @@
         </ul>
       </div>
       <div>
-        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp4_title">Codere Bingo — Electronics Technician</h4>
-        <span class="text-sm italic text-gray-500" data-key="exp4_date">March 2015 – March 2016</span>
+        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp_earlier_title">Earlier experience</h4>
         <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
-          <li data-key="exp4_li1">Maintenance, cleaning, and diagnosis of electronic gaming machines.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp5_title">OSED Entidad Educativa — Customer Service</h4>
-        <span class="text-sm italic text-gray-500" data-key="exp5_date">December 2011 – January 2014</span>
-        <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
-          <li data-key="exp5_li1">Customer service, sales, administration, opening and closing of the premises.</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-lg sm:text-xl font-semibold" data-key="exp6_title">Freelancer — Electronics Technician</h4>
-        <span class="text-sm italic text-gray-500" data-key="exp6_date">2008 – 2010</span>
-        <ul class="list-disc pl-5 mt-2 text-sm sm:text-base">
-          <li data-key="exp6_li1">Assembly and soldering of electronic boards at the request of private clients.</li>
+          <li data-key="exp_earlier_li1">Codere Bingo — Electronics Technician (2015 – 2016)</li>
+          <li data-key="exp_earlier_li2">OSED Entidad Educativa — Customer Service (2011 – 2014)</li>
+          <li data-key="exp_earlier_li3">Freelancer — Electronics Technician (2008 – 2010)</li>
         </ul>
       </div>
     </div>
@@ -210,13 +212,6 @@
         <ul class="list-disc pl-5 mt-2">
           <li data-key="edu3_cert1">PC Repair and Assembly Technician (2010)</li>
           <li data-key="edu3_cert2">Cell Phone Repair Technician (2010)</li>
-          <li data-key="edu3_cert3">Work Orientation and Induction Program (POI)</li>
-          <ul class="list-disc pl-5 mt-1">
-            <li data-key="edu3_poi1">Computing</li>
-            <li data-key="edu3_poi2">Occupational Training Project</li>
-            <li data-key="edu3_poi3">Workplace Health and Safety</li>
-            <li data-key="edu3_poi4">Labor Rights</li>
-          </ul>
         </ul>
       </li>
     </ul>
@@ -224,43 +219,58 @@
 
   <section id="skills" class="px-4 py-6 sm:py-10 max-w-4xl mx-auto">
     <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b pb-2" data-key="skills_title">Technical Skills</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm sm:text-base">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm sm:text-base">
       <div>
-        <h4 class="font-semibold mb-2" data-key="skills_tools_title">Tools & Libraries</h4>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Android SDK</li>
-          <li>Retrofit</li>
-          <li>Room</li>
-          <li>Koin</li>
-          <li>Firebase</li>
-          <li>Git</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2" data-key="skills_methodologies_title">Architecture & Patterns</h4>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Clean Architecture</li>
-          <li>MVVM</li>
-          <li>Repository Pattern</li>
-          <li>Dependency Injection</li>
-          <li>Unit Testing</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2" data-key="skills_soft_title">Soft Skills</h4>
-        <ul class="list-disc list-inside space-y-1">
-          <li data-key="skills_soft_li1">Effective Communication</li>
-          <li data-key="skills_soft_li2">Teamwork</li>
-          <li data-key="skills_soft_li3">Proactivity</li>
-          <li data-key="skills_soft_li4">Results-oriented</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-2" data-key="skills_languages_title">Languages</h4>
+        <h4 class="font-semibold mb-2" data-key="skills_prog_title">Programming Languages</h4>
         <ul class="list-disc list-inside space-y-1">
           <li>Kotlin</li>
           <li>Java</li>
           <li>C</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-key="skills_android_title">Android</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Jetpack Compose</li>
+          <li>Android SDK</li>
+          <li>Coroutines</li>
+          <li>Retrofit</li>
+          <li>Room</li>
+          <li>Koin</li>
+          <li>Firebase</li>
+          <li>Glide</li>
+          <li>Picasso</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-key="skills_arch_title">Architecture &amp; Patterns</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Clean Architecture</li>
+          <li>MVVM</li>
+          <li>Repository Pattern</li>
+          <li>Use Cases</li>
+          <li>Dependency Injection</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-key="skills_practices_title">Practices</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Scrum</li>
+          <li>Unit Testing</li>
+          <li>CI/CD</li>
+          <li>Build Automation</li>
+          <li>App Hardening</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2" data-key="skills_tools_title">Tools</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Git</li>
+          <li>Gradle</li>
+          <li>Bugsnag</li>
+          <li>Kibana</li>
+          <li>Grafana</li>
+          <li>BigQuery</li>
         </ul>
       </div>
     </div>
@@ -268,7 +278,7 @@
       <h4 class="font-semibold mb-2" data-key="skills_languages_section_title">Languages</h4>
       <ul class="list-disc list-inside space-y-1">
         <li data-key="skills_lang_li1">Spanish: Native</li>
-        <li data-key="skills_lang_li2">English: Basic (in training)</li>
+        <li data-key="skills_lang_li2">English</li>
       </ul>
     </div>
   </section>
